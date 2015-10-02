@@ -1,0 +1,19 @@
+<template name="bubble">  
+	<div class="bubble-container">
+		<!-- Text box for bubble content -->
+		<textarea class="form-control" id="bubbleText" placeholder="Say something!" rows="3"></textarea>
+
+		<!-- Character count & button -->
+		<div class="btnGroup">
+			<strong class="{{charClass}}">{{charCount}}</strong>
+			{{#if currentUser}}
+			<button class="babbleBtn" type="button" {{disableButton}}>Babble
+			</button>
+			{{else}}
+			<button class="babbleBtn" type="button" disabled>You must be logged in</button>
+			{{/if}}
+			<br/>
+			<br/>
+		</div>
+	</div>
+</template>  

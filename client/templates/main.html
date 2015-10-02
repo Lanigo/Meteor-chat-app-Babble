@@ -1,0 +1,27 @@
+<head>  
+	<title>Babble</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 	<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/bubble.css" type="text/css">
+	<link rel="icon" sizes="16x16 32x32" href="favicon.ico">	
+</head>
+
+<body>
+	<div class="top">
+		<img class="logo" src="logo.png">
+		
+	</div>
+		<div class="first">
+			{{> userManage}}
+			{{# if currentUser}}
+			{{> befriendUsers}}
+			{{/if}}
+		</div>
+		<div class="clearfix"></div>
+		<br/>
+			{{> bubble}}
+			{{#if currentUser}}
+			{{> babbleFeed}}
+			{{/if}}
+</body>

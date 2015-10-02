@@ -1,0 +1,46 @@
+<!-- signup template -->
+<template name="userManage">  
+  	<div class="user-container">
+		{{# if currentUser}}
+		<!-- Message for logged in user -->
+		<p>Hello <strong>@{{currentUser.username}}</strong>, welcome to Babble</p>
+		<button type="button" class="user-info" id="logout">Log out</button>
+
+		<table class="table">
+			<tr>
+				<td class="tableheader">Babbles</td>
+				<td class="tableheader">Befriended</td>
+				<td class="tableheader">Befriended by</td>
+			</tr>
+			<tr>
+				<td class="tableheader">{{babbles}}</td>
+				<td class="tableheader">{{befriended}}</td>
+				<td class="tableheader">{{befriended_by}}</td>
+			</tr>
+		</table>
+		<br/>
+
+		{{else}}
+		<!-- Log in module -->
+		<h4>Already have an account?</h4>
+		<div class="form-group">
+  			<input class="user-form-control" id="login-username" placeholder="Username">
+  			<input class="user-form-control" id="login-password" placeholder="Password" type="password">
+		</div>
+
+		<button type="button" class="user-info" id="login">Log in</button>
+
+
+				<!-- Sign up module -->
+		<h4>New User?</h4>
+		<div class="form-group">
+  			<input class="user-form-control" id="signup-username" placeholder="Username">
+  			<input class="user-form-control" id="signup-fullname" placeholder="Full Name (Optional)">
+  			<input class="user-form-control" id="signup-password" placeholder="Password" type="password">
+		</div>
+		
+		<button type="button" class="user-info" id="signup">Sign up</button>
+		{{/if}}
+
+	</div>
+</template>  

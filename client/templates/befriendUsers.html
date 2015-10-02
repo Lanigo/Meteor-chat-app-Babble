@@ -1,0 +1,12 @@
+<template name="befriendUsers">
+	<div class="befriend-container">
+		<div class="recommend-users">  
+  			<h5>Who to befriend:</h5>
+  			{{#each recommendedUsers}}
+    		<button type="button" class="default" id="befriendRec">Befriend @{{this.username}}</button>
+  			{{/each}}
+		</div>
+		<br/>
+		<br/> 
+	</div>
+</template>

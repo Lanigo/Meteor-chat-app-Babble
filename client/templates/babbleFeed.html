@@ -1,0 +1,21 @@
+<template name="babbleFeed">  
+	<div class="babblefeed-container">
+		<!-- Text box for tweet content -->
+		{{#each babbleMessage}}
+		<div class="panel-info">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<h2>@{{this.user}}</h2>
+				<h3>{{this.timestamp}}</h3>
+				</div>
+			</div>
+						
+			<div class="panel-body">
+				<h3>
+					{{this.message}}
+				</h3>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</template>  
